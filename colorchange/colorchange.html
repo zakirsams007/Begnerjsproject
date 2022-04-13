@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorChange</title>
+    <style>
+        #color-switch{
+            padding: 30px;
+            margin: 50px 200px;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-between;
+
+
+            text-align: center;
+
+        }
+        .btn{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            cursor: pointer;
+            border: solid 2px gray;
+            border-radius: 50%;
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #red{
+            background-color: red;
+        }
+        #black{
+            background-color: black
+        }
+        h1{
+            text-align: center;
+            margin: 50px;
+            font-size: 40px;
+            font-size: bold;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px ;
+        }
+        p{
+            text-align: justify;
+            padding: 40px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="txt">Backgroung color change.</h1>
+    <div id="color-switch">
+
+            <span class="btn" id="white" onclick="changeBC('#ffffff')"></span>
+            <span class="btn" id="aqua" onclick="changeBC('#ccebfb')"></span>
+            <span class="btn" id="blue" onclick="changeBC('#250861')"></span>
+            <span class="btn" id="yellow" onclick="changeBC('#ffcc00')"></span>
+            <span class="btn" id="red" onclick="changeBC('#e83b1e')"></span>
+            <span class="btn" id="black" onclick="changeBC('#000000')"></span>
+    </div>
+
+    <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi accusamus ullam aliquid, eaque voluptate dignissimos blanditiis laboriosam eius sed illo dolore hic ipsum incidunt est qui. Natus necessitatibus blanditiis quaerat ab labore quis qui, aut ducimus beatae soluta, quia non velit accusamus iure! Voluptates odit consectetur corrupti illo eveniet. Repellat deleniti error beatae placeat accusantium vitae modi quod maiores architecto! Quos omnis provident, nemo nobis minima atque sit. Libero, odit iusto optio quasi tempora aliquam quod ea suscipit laudantium obcaecati quia cum inventore omnis repudiandae dolor. Veritatis voluptates nobis reprehenderit sequi fuga nam quasi error sit deserunt quo distinctio excepturi, eligendi non quos accusantium architecto aperiam. Distinctio, modi nemo sapiente doloremque tempore, enim hic obcaecati amet eum est perspiciatis, illo cupiditate ut blanditiis quibusdam tenetur odit soluta voluptas vitae magnam cumque. Nemo, sequi fugit a necessitatibus impedit ex, ipsa in deleniti hic porro vel. Aliquid accusantium vero esse 
+
+    </p>
+
+    <script>
+        function changeBC(color){
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("txt");
+
+            if(color == "#000000"){
+                for(let ele of txt){
+                    ele.style.color = "white";
+                }
+            }
+            else{
+                for(let ele of txt){
+                    ele.style.color = "black";
+                }
+            }
+
+         
+
+        }
+    </script>
+    
+</body>
+</html>
